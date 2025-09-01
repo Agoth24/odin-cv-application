@@ -1,10 +1,17 @@
 import "../index.css"
 
-export default function FormattedCV() {
+export default function FormattedCV({onEdit}) {
+
+    // function handleClick(e) {
+    //     e.preventDefault()
+    //     onEdit()
+    // }
 
     return (
-        <section>
-
-        </section>
+        <main>
+            <section>
+              
+            </section>
+        </main>
     )
 }
