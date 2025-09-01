@@ -1,14 +1,17 @@
-// import { useState } from 'react'
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Form from "./components/Form";
+import FormattedCV from "./components/FormattedCV";
 
 function App() {
+  const [page, setPage] = useState("CV");
   return (
     <>
-      <Header />
+      {page === "form" && <Header />}
       <main>
-        <Form />
+        {page === "form" && <Form onSubmit={() => setPage("CV")} />}
+        {page === "CV" && <FormattedCV onEdit={() => setPage("form")}/>}
       </main>
     </>
   );

@@ -3,7 +3,7 @@ import Education from "./Education";
 import PracticalExp from "./PracticalExp";
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({onSubmit}) {
   const [formData, setFormData] = useState({});
 
   function handleChange(e) {
@@ -13,7 +13,9 @@ export default function Form() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log("Submitted data:", formData)
+    onSubmit()
   }
+  
   return (
     <form onSubmit={handleSubmit}>
       <GeneralInfo values={formData} onChange={handleChange}/>
