@@ -1,26 +1,24 @@
 import GeneralInfo from "./GeneralInfo";
 import Education from "./Education";
 import PracticalExp from "./PracticalExp";
-import { useState } from "react";
 
-export default function Form({onSubmit}) {
-  const [formData, setFormData] = useState({});
+export default function Form({onSubmit, data, setData}) {
 
   function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setData({ ...data, [e.target.name]: e.target.value });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("Submitted data:", formData)
+    console.log("Submitted data:", data)
     onSubmit()
   }
   
   return (
     <form onSubmit={handleSubmit}>
-      <GeneralInfo values={formData} onChange={handleChange}/>
-      <Education values={formData} onChange={handleChange}/>
-      <PracticalExp values={formData} onChange={handleChange}/>
+      <GeneralInfo values={data} onChange={handleChange}/>
+      <Education values={data} onChange={handleChange}/>
+      <PracticalExp values={data} onChange={handleChange}/>
       <button type="submit" id="submitBtn">Submit</button>
     </form>
   );

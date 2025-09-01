@@ -1,17 +1,12 @@
-import "../index.css"
+import "../index.css";
 
-export default function FormattedCV({onEdit}) {
+export default function FormattedCV({ onEdit, data }) {
+  function handleClick(e) {
+    e.preventDefault();
+    onEdit();
+  }
 
-    // function handleClick(e) {
-    //     e.preventDefault()
-    //     onEdit()
-    // }
-
-    return (
-        <main>
-            <section>
-              
-            </section>
-        </main>
-    )
+  return <section>
+    
+  </section>;
 }

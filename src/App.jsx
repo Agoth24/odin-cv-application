@@ -6,12 +6,14 @@ import FormattedCV from "./components/FormattedCV";
 
 function App() {
   const [page, setPage] = useState("form");
+  const [formData, setFormData] = useState({});
+  
   return (
     <>
       {page === "form" && <Header />}
       <main>
-        {page === "form" && <Form onSubmit={() => setPage("CV")} />}
-        {page === "CV" && <FormattedCV onEdit={() => setPage("form")}/>}
+        {page === "form" && <Form data={formData} setData={setFormData} onSubmit={() => setPage("CV")} />}
+        {page === "CV" && <FormattedCV data={formData} onEdit={() => setPage("form")} />}
       </main>
     </>
   );
