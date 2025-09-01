@@ -1,11 +1,10 @@
-import "../App.css";
+import "../index.css";
 import FormGroup from "./FormGroup";
 
 export default function PracticalExp() {
   return (
-    <section>
-      <h2>Practical Work Experience</h2>
-      <form>
+      <fieldset>
+        <legend>Practical Work Experience</legend>
         <FormGroup id="companyName" labelText="Company:" type="text" />
         <FormGroup id="positionTitle" labelText="Position Title:" type="text" />
         <FormGroup
@@ -15,7 +14,6 @@ export default function PracticalExp() {
         />
         <FormGroup id="fromDate" labelText="From:" type="date" />
         <FormGroup id="toDate" labelText="To:" type="date" />
-      </form>
-    </section>
+      </fieldset>
   );
 }
