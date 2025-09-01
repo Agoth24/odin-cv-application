@@ -58,29 +58,50 @@ label {
   font-weight: 600;
 }
 
-input {
-  /* max-width: 80%; */
+input,
+textarea {
   border: 1px solid var(--light-gray);
   accent-color: var(--dark-ocean);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
   max-width: 80%;
-  border: 1px solid var(--light-gray);
+  padding: 0.5rem;
+  font-family: inherit;
 }
 
-input:not([type="textarea"]) {
+input {
   min-height: 1.5rem;
   max-width: 50ch;
 }
 
-input[type="textarea"] {
+textarea {
   min-height: 4rem;
+  max-width: 50ch;
+  resize: vertical;
 }
 
-input:user-invalid {
+input:user-invalid,
+textarea:user-invalid {
   border: 1px solid red;
 }
 
-input:user-valid {
+input:user-valid,
+textarea:user-valid {
   border: 1px solid green;
+}
+
+#submitBtn {
+  border-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #005f73;
+  color: #FFF;
+  transition: 150ms ease-in-out all;
+}
+
+#submitBtn:hover {
+  cursor: pointer;
+  transform: scale(1.1) translateY(-5px);
 }
