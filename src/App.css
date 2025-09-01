@@ -48,15 +48,25 @@ label {
   font-weight: 600;
 }
 
-
-
 input {
-  height: 1.5rem;
   max-width: 80%;
   border: 1px solid var(--light-gray);
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   accent-color: var(--dark-ocean);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  max-width: 80%;
+  border: 1px solid var(--light-gray);
+
+}
+
+
+input:not([type="textarea"]) {
+  min-height: 1.5rem;
+}
+
+input[type="textarea"] {
+min-height: 4rem;
+
 }
 
 input:user-invalid {
