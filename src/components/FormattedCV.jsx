@@ -71,7 +71,7 @@ export default function FormattedCV({ onEdit, data }) {
           </div>
         </div>
       </header>
-      <main className="formattedMain">
+      <main className="formatted-main">
         <CVSection
           title="Educational Experience"
           name={data.schoolName}

@@ -11,6 +11,15 @@ export default function Form({onSubmit, data, setData}) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    
+    // Check if form is valid
+    const form = e.target;
+    if (!form.checkValidity()) {
+      // Show validation messages
+      form.reportValidity();
+      return;
+    }
+    
     console.log("Submitted data:", data)
     onSubmit()
   }
