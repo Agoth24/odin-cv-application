@@ -1,5 +1,5 @@
 export default function FormGroup({ id, labelText, type, value, onChange }) {
-    const maxLength = type === 'text' ? 30 : null
+    const maxLength = type === 'text' ? 40 : null
   return (
     <div className="form-group">
       <label htmlFor={id}>{labelText}</label>
