@@ -26,8 +26,14 @@ main {
   all: unset;
 }
 
-ul {
+ul, li {
     all: unset;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .formatted-header, .contact, .infoSection, .info-text, .info-date, .info-group {
@@ -41,15 +47,20 @@ ul {
 }
 
 .infoSection:not(:last-child) {
-    border-bottom: 1px dotted #000;
+    border-bottom: 1px dotted #a5a5a5;
 }
 
 .formatted-header {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem;
+  padding-bottom: 0;
   gap: 1.5rem;
   align-items: center;
+}
+
+.formatted-header h1 {
+    text-align: center;
 }
 
 .contact {
@@ -58,6 +69,10 @@ ul {
     min-width: 100vw;
     background-color: #000;
     color: #FFF;
+}
+
+.infoSection h2 {
+    text-align: center;
 }
 
 .info-group {
@@ -71,8 +86,13 @@ ul {
     flex-direction: column;
 }
 
-.info-dates {
+.info-dates, .info-text p {
     justify-content: flex-end;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.jobResp {
+    margin-top: 1rem;
+    line-height: 1.15;
 }
