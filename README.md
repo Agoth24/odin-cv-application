@@ -1,4 +1,4 @@
-# CV Application Project
+# CV Application Project 📋
 
 ## Welcome to my first React Project
 
