@@ -3,6 +3,8 @@ import "./App.css";
 import Education from "./components/Education";
 import GeneralInfo from "./components/GeneralInfo";
 import Header from "./components/Header";
+import PracticalExp from "./components/PracticalExp";
+
 function App() {
   return (
     <>
@@ -10,6 +12,7 @@ function App() {
       <main>
       <GeneralInfo />
       <Education />
+      <PracticalExp />
       </main>
     </>
   );

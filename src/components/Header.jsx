@@ -1,5 +1,9 @@
-import '../styles/header.css'
+import "../styles/header.css";
 
 export default function Header() {
-return <h1 className="header">CV Application</h1>
+  return (
+    <div className="header">
+      <h1>CV Application</h1>
+    </div>
+  );
 }

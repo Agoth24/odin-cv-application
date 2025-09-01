@@ -1,4 +1,3 @@
-import "../styles/education.css";
 import "../index.css";
 import FormGroup from "./FormGroup";
 

@@ -1,4 +1,3 @@
-import "../styles/generalInfo.css";
 import "../index.css"
 import FormGroup from "./FormGroup";
 
@@ -10,7 +9,7 @@ export default function GeneralInfo() {
       <form method="#">
         <FormGroup id="nameInput" labelText="Name:" type="text"/>
         <FormGroup id="emailInput" labelText="Email:" type="email"/>
-        <FormGroup id="telInput" labelText="Phone Number:" type="tel"/>
+        <FormGroup id="telInput" labelText="Phone Number:" type=""/>
       </form>
     </section>
   );
