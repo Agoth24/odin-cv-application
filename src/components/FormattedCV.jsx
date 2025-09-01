@@ -1,53 +1,28 @@
 import "../styles/formattedCV.css";
+import CVSection from "./CVSection";
 
 export default function FormattedCV({ onEdit, data }) {
-  const testData = {
-    name: "John Smith",
-    email: "john.smith@email.com",
-    phone: "(555) 123-4567",
-    schoolName: "University of California, Berkeley",
-    progOfStudy: "Bachelor of Science in Computer Science",
-    eduFromDate: "2018-08-25",
-    eduToDate: "2022-05-15",
-    companyName: "Tech Solutions Inc.",
-    positionTitle: "Software Developer",
-    jobResponsibilities:
-      "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented responsive designs and optimized application performance.",
-    workFromDate: "2022-06-01",
-    workToDate: "2024-12-31",
-  };
-
-  function formatDate(dateStr) {
-    const date = new Date(dateStr);
-
-    return date.toLocaleString("en-US", { month: "short", year: "numeric" });
-  }
-  console.log(formatDate("2018-08-25"));
+  // Test data object - remove when done testing
+//   const testData = {
+//     name: "John Smith",
+//     email: "john.smith@email.com",
+//     phone: "(555) 123-4567",
+//     schoolName: "University of California, Berkeley",
+//     progOfStudy: "Bachelor of Science in Computer Science",
+//     eduFromDate: "2018-08-25",
+//     eduToDate: "2022-05-15",
+//     companyName: "Tech Solutions Inc.",
+//     positionTitle: "Software Developer",
+//     jobResponsibilities:
+//       "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented responsive designs and optimized application performance.",
+//     workFromDate: "2022-06-01",
+//     workToDate: "2024-12-31",
+//   };
 
   function handleClick(e) {
     e.preventDefault();
     onEdit();
   }
-
-  /* 
-formData properties
--> (data.{property}) <-
-
-  name
-  email
-  phone
-
-  schoolName
-  progOfStudy
-  eduFromDate
-  eduToDate
-
-  companyName
-  positionTitle
-  jobResponsibilities
-  workFromDate
-  workToDate
-  */
 
   return (
     <article>
@@ -97,41 +72,21 @@ formData properties
         </div>
       </header>
       <main className="formattedMain">
-        <section className="infoSection">
-          <h2>Educational Experience</h2>
-          <ul>
-            <li className="info-group">
-              <div className="info-text">
-                <h3>{data.schoolName}</h3>
-                <p>{data.progOfStudy}</p>
-              </div>
-              <div className="info-dates">
-                <span>{formatDate(data.eduFromDate)}</span>
-                <span> - </span>
-                <span>{formatDate(data.eduToDate)}</span>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section className="infoSection">
-          <h2>Practical Work Experience</h2>
-          <ul>
-            <li>
-              <div className="info-group">
-                <div className="info-text">
-                  <h3>{data.companyName}</h3>
-                  <p>{data.positionTitle}</p>
-                </div>
-                <div className="info-dates">
-                  <span>{formatDate(data.workFromDate)}</span>
-                  <span> - </span>
-                  <span>{formatDate(data.workToDate)}</span>
-                </div>
-              </div>
-              <p className="jobResp">{data.jobResponsibilities}</p>
-            </li>
-          </ul>
-        </section>
+        <CVSection
+          title="Educational Experience"
+          name={data.schoolName}
+          role={data.progOfStudy}
+          fromDate={data.eduFromDate}
+          toDate={data.eduToDate}
+        />
+        <CVSection
+          title="Practical Work Experience"
+          name={data.companyName}
+          role={data.positionTitle}
+          fromDate={data.workFromDate}
+          toDate={data.workToDate}
+          jobResponsibilities={data.jobResponsibilities}
+        />
         <button className="edit-btn no-print" onClick={handleClick}>
           Edit Info
         </button>

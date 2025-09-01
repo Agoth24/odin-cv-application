@@ -43,19 +43,19 @@ ul {
 
 .formatted-header,
 .contact,
-.infoSection,
+.info-section,
 .info-text,
 .info-group {
   display: flex;
 }
 
-.infoSection {
+.info-section {
   flex-direction: column;
   padding: 2rem 1rem;
   gap: 1rem;
 }
 
-.infoSection:not(:last-child) {
+.info-section:not(:last-child) {
   border-bottom: 1px dotted #a5a5a5;
 }
 
@@ -96,7 +96,7 @@ ul {
   flex-shrink: 0;
 }
 
-.infoSection h2 {
+.info-section h2 {
   text-align: center;
 }
 
@@ -129,7 +129,7 @@ ul {
   white-space: nowrap;
 }
 
-.jobResp {
+.jobResponsibilities {
   margin-top: 1rem;
   line-height: 1.15;
 }

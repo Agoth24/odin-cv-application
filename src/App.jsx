@@ -5,7 +5,7 @@ import Form from "./components/Form";
 import FormattedCV from "./components/FormattedCV";
 
 function App() {
-  const [page, setPage] = useState("CV");
+  const [page, setPage] = useState("form");
   const [formData, setFormData] = useState({});
   
   return (
