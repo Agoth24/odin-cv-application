@@ -3,7 +3,7 @@ export default function FormGroup({ id, labelText, type }) {
   return (
     <div className="form-group">
       <label htmlFor={id}>{labelText}</label>
-      <input type="text" id={id} required maxLength={maxLength} />
+      <input type={type} id={id} required maxLength={maxLength} />
     </div>
   );
 }

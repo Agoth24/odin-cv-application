@@ -11,7 +11,6 @@ export default function GeneralInfo() {
         <FormGroup id="nameInput" labelText="Name:" type="text"/>
         <FormGroup id="emailInput" labelText="Email:" type="email"/>
         <FormGroup id="telInput" labelText="Phone Number:" type="tel"/>
-        
       </form>
     </section>
   );

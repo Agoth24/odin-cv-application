@@ -1,27 +1,16 @@
 import "../styles/education.css";
 import "../index.css";
+import FormGroup from "./FormGroup";
 
 export default function Education() {
   return (
     <section>
       <h2>Educational Experience</h2>
       <form method="#">
-        <div className="form-group">
-          <label htmlFor="schoolName">School Name:</label>
-          <input type="text" required/>
-        </div>
-        <div className="form-group">
-          <label htmlFor="progOfStudy">Program of Study:</label>
-          <input type="text" required/>
-        </div>
-        <div className="form-group">
-          <label htmlFor="fromDate">From:</label>
-          <input type="date" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="toDate">To:</label>
-          <input type="date" required />
-        </div>
+        <FormGroup id="schoolName" labelText="School Name:" type="text" />
+        <FormGroup id="progOfStudy" labelText="Program of Study:" type="text" />
+        <FormGroup id="fromDate" labelText="From:" type="date" />
+        <FormGroup id="toDate" labelText="To:" type="date" />
       </form>
     </section>
   );
