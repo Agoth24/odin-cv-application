@@ -15,93 +15,10 @@ main {
   align-items: center; */
 }
 
-form {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-
 
 h1,
 h2,
 h3,
 h4 {
   margin: 0;
-}
-
-fieldset {
-  border: 1px solid var(--light-gray);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  width: clamp(75%, 80%, 100%);
-}
-
-legend {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5cap;
-}
-
-label {
-  display: flex;
-  gap: 1rem;
-  font-weight: 600;
-}
-
-input,
-textarea {
-  border: 1px solid var(--light-gray);
-  accent-color: var(--dark-ocean);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 0.25rem;
-  max-width: 80%;
-  padding: 0.5rem;
-  font-family: inherit;
-}
-
-input {
-  min-height: 1.5rem;
-  max-width: 50ch;
-}
-
-textarea {
-  min-height: 4rem;
-  max-width: 50ch;
-  resize: vertical;
-}
-
-input:user-invalid,
-textarea:user-invalid {
-  border: 1px solid red;
-}
-
-input:user-valid,
-textarea:user-valid {
-  border: 1px solid green;
-}
-
-#submitBtn {
-  border-color: transparent;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  background-color: #005f73;
-  color: #FFF;
-  transition: 150ms ease-in-out all;
-}
-
-#submitBtn:hover {
-  cursor: pointer;
-  transform: scale(1.1) translateY(-5px);
 }

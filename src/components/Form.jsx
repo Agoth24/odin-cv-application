@@ -1,6 +1,7 @@
 import GeneralInfo from "./GeneralInfo";
 import Education from "./Education";
 import PracticalExp from "./PracticalExp";
+import "../styles/form.css"
 
 export default function Form({onSubmit, data, setData}) {
 
