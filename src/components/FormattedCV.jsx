@@ -1,23 +1,23 @@
 import "../styles/formattedCV.css";
 import CVSection from "./CVSection";
 
-export default function FormattedCV({ onEdit, data }) {
+export default function FormattedCV({ onEdit, lol }) {
   // Test data object - remove when done testing
-//   const testData = {
-//     name: "John Smith",
-//     email: "john.smith@email.com",
-//     phone: "(555) 123-4567",
-//     schoolName: "University of California, Berkeley",
-//     progOfStudy: "Bachelor of Science in Computer Science",
-//     eduFromDate: "2018-08-25",
-//     eduToDate: "2022-05-15",
-//     companyName: "Tech Solutions Inc.",
-//     positionTitle: "Software Developer",
-//     jobResponsibilities:
-//       "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented responsive designs and optimized application performance.",
-//     workFromDate: "2022-06-01",
-//     workToDate: "2024-12-31",
-//   };
+  const data = {
+    name: "John Smith",
+    email: "john.smith@email.com",
+    phone: "(555) 123-4567",
+    schoolName: "University of California, Berkeley",
+    progOfStudy: "Bachelor of Science in Computer Science",
+    eduFromDate: "2018-08-25",
+    eduToDate: "2022-05-15",
+    companyName: "Tech Solutions Inc.",
+    positionTitle: "Software Developer",
+    jobResponsibilities:
+      "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented responsive designs and optimized application performance.",
+    workFromDate: "2022-06-01",
+    workToDate: "2024-12-31",
+  };
 
   function handleClick(e) {
     e.preventDefault();

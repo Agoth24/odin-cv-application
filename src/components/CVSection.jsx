@@ -19,7 +19,7 @@ export default function CVSection({
             <div className="info-group">
               <div className="info-text">
                 <h3>{name}</h3>
-                <p>{role}</p>
+                <h4>{role}</h4>
               </div>
               <div className="info-dates">
                 <span>{formatDate(fromDate)}</span>
