@@ -1,18 +1,14 @@
 // import { useState } from 'react'
 import "./App.css";
-import Education from "./components/Education";
-import GeneralInfo from "./components/GeneralInfo";
 import Header from "./components/Header";
-import PracticalExp from "./components/PracticalExp";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
       <Header />
       <main>
-      <GeneralInfo />
-      <Education />
-      <PracticalExp />
+        <Form />
       </main>
     </>
   );
