@@ -60,10 +60,13 @@ textarea {
   font-family: inherit;
 }
 
+input, textarea {
+  font-size: 16px;
+}
+
 input {
   min-height: 1.5rem;
   max-width: 50ch;
-  font-size: 16px;
 }
 
 textarea {
