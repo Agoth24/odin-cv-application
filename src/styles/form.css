@@ -83,7 +83,7 @@ textarea:user-valid {
   border: 1px solid green;
 }
 
-#submitBtn {
+#submit-btn {
   border-color: transparent;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -95,7 +95,7 @@ textarea:user-valid {
   transition: 150ms ease-in-out all;
 }
 
-#submitBtn:hover {
+#submit-btn:hover {
   cursor: pointer;
   transform: scale(1.1) translateY(-5px);
 }

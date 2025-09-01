@@ -5,7 +5,8 @@
 h1,
 h2,
 h3,
-h4, p {
+h4,
+p {
   margin: 0;
 }
 
@@ -14,7 +15,7 @@ h1 {
 }
 
 h3 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 body,
@@ -22,32 +23,40 @@ html {
   margin: 0;
 }
 
-main {
+.formattedMain {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+}
+
+
+ul,
+li {
   all: unset;
 }
 
-ul, li {
-    all: unset;
-}
-
 ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.formatted-header, .contact, .infoSection, .info-text, .info-date, .info-group {
-    display: flex;
+.formatted-header,
+.contact,
+.infoSection,
+.info-text,
+.info-group {
+  display: flex;
 }
 
 .infoSection {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 1rem;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1rem;
 }
 
 .infoSection:not(:last-child) {
-    border-bottom: 1px dotted #a5a5a5;
+  border-bottom: 1px dotted #a5a5a5;
 }
 
 .formatted-header {
@@ -60,39 +69,101 @@ ul {
 }
 
 .formatted-header h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .contact {
-    justify-content: space-between;
-    padding: 0.25rem 10%;
-    min-width: 100vw;
-    background-color: #000;
-    color: #FFF;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 10%;
+  min-width: 100vw;
+  background-color: #000;
+  color: #fff;
+}
+
+.contact-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-group:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.contact-group svg {
+  flex-shrink: 0;
 }
 
 .infoSection h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .info-group {
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 .info-text {
-    justify-content: flex-start;
-    flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.info-textp,
+.info-dates span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.info-text p {
+  justify-content: flex-end;
 }
 
-.info-dates, .info-text p {
-    justify-content: flex-end;
-    font-size: 0.9rem;
-    font-weight: 500;
+.info-dates {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.info-dates > * {
+  white-space: nowrap;
 }
 
 .jobResp {
-    margin-top: 1rem;
-    line-height: 1.15;
+  margin-top: 1rem;
+  line-height: 1.15;
+}
+
+.edit-btn {
+  border-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #005f73;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: 150ms ease-in-out all;
+  margin-top: 3rem;
+  place-self: center;
+}
+
+.edit-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1) translateY(-5px);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  /* Copilot added this for no transparent contact bar during print */
+  .contact {
+    background-color: #000 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }

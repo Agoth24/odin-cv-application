@@ -16,11 +16,13 @@ export default function Form({onSubmit, data, setData}) {
   }
   
   return (
+    <main>
     <form onSubmit={handleSubmit}>
       <GeneralInfo values={data} onChange={handleChange}/>
       <Education values={data} onChange={handleChange}/>
       <PracticalExp values={data} onChange={handleChange}/>
-      <button type="submit" id="submitBtn">Submit</button>
+      <button type="submit" id="submit-btn">Submit</button>
     </form>
+    </main>
   );
 }

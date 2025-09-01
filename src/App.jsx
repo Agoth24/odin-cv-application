@@ -11,10 +11,8 @@ function App() {
   return (
     <>
       {page === "form" && <Header />}
-      <main>
         {page === "form" && <Form data={formData} setData={setFormData} onSubmit={() => setPage("CV")} />}
         {page === "CV" && <FormattedCV data={formData} onEdit={() => setPage("form")} />}
-      </main>
     </>
   );
 }
