@@ -10,7 +10,7 @@ export default function PracticalExp() {
         <FormGroup id="positionTitle" labelText="Position Title:" type="text" />
         <FormGroup
           id="jobResp"
-          labelText="Main Responsibilities"
+          labelText="Main Responsibilities:"
           type="textarea"
         />
         <FormGroup id="fromDate" labelText="From:" type="date" />
