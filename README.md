@@ -2,6 +2,8 @@
 
 ## Welcome to my first React Project
 
+[See it Live](https://agoth24-cv-generator.netlify.app/)
+
 This week I've started learning react via *The Odin Project*, covering the basics
 with an in-depth intro to concepts such as functional components, props,
 state, and rendering techniques.
